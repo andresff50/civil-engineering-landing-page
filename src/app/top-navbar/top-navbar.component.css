@@ -6,10 +6,6 @@
   background-color: #f5f6f6;
 }
 
-.top-navbar a:focus {
-  border-bottom: 2px solid #ffc704;
-}
-
 .top-navbar h2 {
   font-family: "Open Sans", Sans-serif;
   color: #5f656d;
@@ -59,7 +55,8 @@
 
 
 .top-navbar div:last-child a:hover {
-  color: #ffc704; /* Color on hover */
+  color: #ffc704;
+  /* Color on hover */
 }
 
 .top-navbar div:last-child i {
@@ -67,4 +64,23 @@
   width: 1em;
   height: 1em;
   font-weight: 400;
+}
+
+
+@media (max-width: 768px) {
+  .top-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+  }
+
+  .top-navbar div:first-child {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  .top-navbar div:last-child {
+    margin-left: 0px;
+  }
 }
