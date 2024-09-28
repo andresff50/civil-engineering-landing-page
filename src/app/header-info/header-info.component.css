@@ -1,0 +1,78 @@
+/* Estilos Generales */
+.header-container {
+  background-color: white;
+  padding: 16px 0; /* py-4 en Tailwind */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenido (mx-auto) */
+}
+
+/* Estilos del Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 48px; /* Equivalente a h-12 en Tailwind */
+}
+
+.logo-text {
+  margin-left: 8px; /* ml-2 */
+}
+
+/* Estilos de la Información de Soporte y Horario */
+.info-container {
+  display: flex;
+  gap: 32px; /* space-x-8 */
+  align-items: center;
+}
+
+.support-info, .working-time-info {
+  display: flex;
+  align-items: center;
+}
+
+.support-icon, .working-time-icon {
+  color: #F59E0B; /* text-yellow-500 */
+  font-size: 24px; /* text-2xl */
+}
+
+.support-text, .working-time-text {
+  margin-left: 8px; /* ml-2 */
+}
+
+.support-title, .working-time-title {
+  display: block; /* block */
+  font-size: 14px; /* text-sm */
+  color: #6B7280; /* text-gray-500 */
+}
+
+.support-phone, .working-time-hours {
+  display: block; /* block */
+  font-size: 18px; /* text-lg */
+  font-weight: bold;
+  color: #1E3A8A; /* text-blue-900 */
+}
+
+/* Estilos del Botón */
+.request-quote {
+}
+
+.quote-button {
+  background-color: #F59E0B; /* bg-yellow-500 */
+  color: white;
+  padding: 12px 24px; /* px-6 py-3 */
+  border-radius: 6px; /* rounded-md */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.quote-button:hover {
+  background-color: #D97706; /* hover:bg-yellow-400 */
+}
