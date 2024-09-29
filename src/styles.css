@@ -6,6 +6,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Hind";
+  src: url('assets/fonts/Hind/Hind-Regular.ttf') format('truetype'); /* Add other formats if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   box-sizing: border-box;
   display: block;
@@ -14,4 +21,5 @@ body {
   position: static;
   z-index: auto;
   margin: 0;
+  font-family: "Open Sans", Sans-serif;
 }
