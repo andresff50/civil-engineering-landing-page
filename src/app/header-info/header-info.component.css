@@ -1,14 +1,14 @@
 .header-container {
-  background-color: #FFFFFF;
-  padding: 14px 0px;
+  padding: 14px 0px 12px 0px;
+  background-color: #FFF;
 }
 
 .header-content {
-  width: 100%;
-  max-width: clamp(300px, 90%, 1200px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: clamp(300px, 90%, 1200px);
   margin: 0 auto;
 }
 
@@ -18,26 +18,24 @@
   margin-left: 16px;
 }
 
-.logo {
-  max-width: 100%;
-  height: auto;
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
 }
 
-.info-container {
-  color: #ffc704;
+.support-info i, .working-time-info i {
+  margin-right: 10px;
   font-size: 29px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: 10px;
-  flex-grow: 1;
-  padding-left: 50px;
-  line-height: 1;
+  color: #ffc704;
+  align-self: self-start;
 }
 
 .support-info, .working-time-info {
   display: flex;
   align-items: center;
+  line-height: 1.443;
 }
 
 .support-text, .working-time-text {
@@ -45,20 +43,17 @@
 }
 
 .support-title, .working-time-title {
+  display: block;
   color: #6B7280;
   font-size: 13px;
   font-weight: 400;
-  display: block;
-  text-transform: uppercase;
-  line-height: 22px;
-  letter-spacing: 1px;
 }
 
 .working-time-title {
-  color: #00274e;
+  color: #5f656d;
 }
 
-.working-time-hours {
+.support-phone {
   font-family: "Hind", Sans-serif;
   color: #222931;
   display: block;
@@ -68,20 +63,26 @@
   text-decoration: none;
 }
 
-.support-phone {
-  font-family: "Hind", Sans-serif;
-  color: #848a90;
+.working-time-hours {
   display: block;
+  font-family: "Hind", Sans-serif;
+  color: #222931;
   font-size: 16px;
   font-weight: 600;
   font-style: normal;
   text-decoration: none;
 }
 
+.request-quote {
+  margin: 0px 0px 0px 30px;
+}
+
 .quote-button {
+  display: flex;
+  align-items: center;
   color: white;
+  padding: 13.5px 29px 11.5px 29px;
   background-color: #FFC704;
-  padding: 11.5px 29px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -108,11 +109,7 @@
 .divider {
   height: 50px; /* Alto de la línea vertical */
   border-left: 1px solid #e0e0e0; /* Línea vertical */
-  margin: 0 12px; /* Espacio entre los elementos y la línea */
-}
-
-.request-quote {
-  margin: 0px 0px 0px 30px;
+  margin: 0 25px; /* Espacio entre los elementos y la línea */
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -124,7 +121,7 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .info-container, .request-quote {
+  .info-container {
     display: none
   }
 
