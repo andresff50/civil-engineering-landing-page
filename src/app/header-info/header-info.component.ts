@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './header-info.component.css'
 })
 export class HeaderInfoComponent {
-
+  supportInfo = {
+    title: "CUSTOM SUPPORT & SALE",
+    text: "+7-495-1234567"
+  };
+  workingTimeInfo = {
+    title: "WORKING TIME",
+    text: "MON–SAT: 08:00–18:00"
+  };
+  buttonText = "REQUEST A QUOTE";
 }
