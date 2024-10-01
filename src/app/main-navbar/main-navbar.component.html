@@ -1,1 +1,48 @@
-<p>main-navbar works!</p>
+<nav class="navbar">
+  <!-- Container -->
+  <div class="navbar-container">
+
+    <ul class="nav-links desktop-menu">
+      <!-- Home Link -->
+      <li>
+        <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
+      </li>
+
+      <!-- About Link -->
+      <li>
+        <a class="nav-link" routerLink="/about">About</a>
+      </li>
+
+      <!-- Services Dropdown -->
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" aria-current="page" routerLink="/services">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Construction</a></li>
+          <li><a class="dropdown-item" href="#">House Renovation</a></li>
+          <li><a class="dropdown-item" href="#">Architecture & Building</a></li>
+          <li><a class="dropdown-item" href="#">Interior Design</a></li>
+          <li><a class="dropdown-item" href="#">Building Engineering</a></li>
+          <li><a class="dropdown-item" href="#">Preconstruction Planning</a></li>
+        </ul>
+      </li>
+
+      <!-- Projects Dropdown -->
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" aria-current="page" routerLink="/projects">Projects <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Project 1</a></li>
+          <li><a class="dropdown-item" href="#">Project 2</a></li>
+          <li><a class="dropdown-item" href="#">Project 3</a></li>
+        </ul>
+      </li>
+
+      <!-- Contact Link -->
+      <li>
+        <a class="nav-link" routerLink="/contact">Contact</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

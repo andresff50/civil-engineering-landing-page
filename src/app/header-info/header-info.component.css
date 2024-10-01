@@ -128,4 +128,8 @@
   .header-content {
     justify-content: center;
   }
+
+  .header-container {
+    padding: 25px 15px;
+  }
 }
