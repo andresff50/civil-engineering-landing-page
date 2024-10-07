@@ -1,4 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  float: none;
+  line-height: 24.65px;
+  position: static;
+  z-index: auto;
+  margin: 0;
+  font-family: "Open Sans", Sans-serif;
+}
+
+/* Fonts */
 @font-face {
   font-family: "Open Sans";
   src: url('assets/fonts/OpenSans/OpenSans-VariableFont.ttf') format('truetype'); /* Add other formats if needed */
@@ -13,13 +27,24 @@
   font-style: normal;
 }
 
-body {
-  box-sizing: border-box;
-  display: block;
-  float: none;
-  line-height: 24.65px;
-  position: static;
-  z-index: auto;
-  margin: 0;
-  font-family: "Open Sans", Sans-serif;
+/* Colors */
+:root {
+  --primary-color: #ffc704;
+  --secondary-color: #222931;
+  --white-color: #ffffff;
+  --header-bg-color: #00274e;
+  --text-muted: #6B7280;
+}
+
+/* Utility classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

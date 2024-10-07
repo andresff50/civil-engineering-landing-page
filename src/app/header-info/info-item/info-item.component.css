@@ -1,0 +1,30 @@
+.info-container {
+  line-height: 1.443;
+}
+
+.info-container i {
+  font-size: 29px;
+  align-self: start;
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.info-text {
+  margin-left: 8px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  color: var(--text-muted);
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: none;
+  display: block;
+  color: var(--secondary-color);
+}
