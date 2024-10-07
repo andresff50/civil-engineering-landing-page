@@ -1,0 +1,117 @@
+<nav class="navbar">
+  <!-- Container -->
+  <div class="navbar-container">
+    <!-- Icono de hamburguesa (visible en móviles) -->
+    <div class="hamburger">
+      <button id="hamburger-btn" class="hamburger-btn" (click)="toggleMobileMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <ul class="desktop-menu nav-links">
+      <!-- Home Link -->
+      <li>
+        <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
+      </li>
+
+      <!-- About Link -->
+      <li>
+        <a class="nav-link" routerLink="/about">About</a>
+      </li>
+
+      <!-- Services Dropdown -->
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" aria-current="page" routerLink="/services">Services <i
+            class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          @for (service of services; track service.id) {
+          <li><a class="dropdown-item" href="#">{{service.name}}</a></li>
+          }
+        </ul>
+      </li>
+
+      <!-- Projects Dropdown -->
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" aria-current="page" routerLink="/projects">Projects <i
+            class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          @for (project of projects; track project.id) {
+          <li><a class="dropdown-item" href="#">{{project.name}}</a></li>
+          }
+        </ul>
+      </li>
+
+      <!-- Contact Link -->
+      <li>
+        <a class="nav-link" routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Menú desplegable para pantallas pequeñas -->
+    <div [ngClass]="{'active': isMobileMenuOpen}" id="mobile-menu" class="mobile-menu">
+      <div class="top-container">
+        <button (click)="toggleMobileMenu()" class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+
+        <!-- Menú desplegable de servicios en móviles -->
+        <li class="mobile-dropdown">
+          <a class="nav-link" (click)="toggleDropdown('services')">Services <i
+              class="fa-solid fa-chevron-right"></i></a>
+          @if (selectedDropdown === 'services') {
+          <div class="dropdown-menu">
+            <a class="back-link" href="#" (click)="closeDropdown()">&#9664; Back</a>
+            <h3 class="menu-title">PROJECTS</h3>
+            <ul class="dropdown-menu">
+              @for (service of services; track service.id) {
+              <li><a class="dropdown-item" href="#">{{service.name}}</a></li>
+              }
+            </ul>
+          </div>
+          }
+        </li>
+
+        <!-- Menú desplegable de proyectos en móviles -->
+        <li class="mobile-dropdown">
+          <a href="#" class="nav-link" (click)="toggleDropdown('projects')">Projects <i
+              class="fa-solid fa-chevron-right"></i></a>
+        </li>
+
+        <li><a href="#" class="nav-link highlight">Contact</a></li>
+      </ul>
+
+
+      <div class="info-container">
+        <!-- Soporte al cliente -->
+        <div class="support-info">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span class="support-title">{{supportInfo.title}}</span>
+          <span class="support-phone">{{supportInfo.text}}</span>
+        </div>
+  
+        <!-- Horario de trabajo -->
+        <div class="working-time-info">
+          <i class="fas fa-clock working-time-icon"></i>
+          <span class="working-time-title">{{workingTimeInfo.title}}</span>
+          <span class="working-time-hours">{{workingTimeInfo.text}}</span>
+        </div>
+
+        <div class="request-quote">
+          <a href="#" class="quote-button">
+            <i class="fa-regular fa-envelope"></i>
+            <span>{{buttonText}}</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

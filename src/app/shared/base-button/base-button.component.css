@@ -1,0 +1,25 @@
+.base-button {
+  padding: 13.5px 29px 13.5px 29px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.base-button span {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.32em;
+  letter-spacing: 0.7px;
+}
+
+.base-button i {
+  font-size: 14px;
+  margin: 0px 5px 0px 0px;
+}
+
+.base-button:hover {
+  background-color: var(--header-bg-color);
+}

@@ -1,9 +1,15 @@
 .top-navbar {
-  padding: 10px 48px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  padding: 5px 0;
   background-color: #f5f6f6;
+  font-family: Archivo, sans-serif;
+}
+
+.top-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: clamp(300px, 90%, 1200px);
+  margin: 0 auto;
 }
 
 .top-navbar h2 {
@@ -32,34 +38,37 @@
   font-size: 13px;
 }
 
-.top-navbar div:first-child {
+.info-msg {
   display: flex;
   align-items: center;
   padding-left: 15px;
 }
 
-.top-navbar div:first-child h2 {
-  padding: 5px 10px;
-  margin: 0px;
+.info-msg h2 {
+  padding: 0 10px;
 }
 
-.top-navbar div:last-child {
+.social-links {
   display: flex;
-  align-content: center;
-  margin-left: 120px;
+  align-items: center;
+  margin-right: 15px;
 }
 
-.top-navbar div:last-child span {
-  padding: 0px 9.5px;
+.social-links span {
+  padding: 0px 9px;
+}
+
+.social-links span:last-child {
+  padding-right: 0;
 }
 
 
-.top-navbar div:last-child a:hover {
+.social-links a:hover {
   color: #ffc704;
   /* Color on hover */
 }
 
-.top-navbar div:last-child i {
+.social-links i {
   font-size: 17px;
   width: 1em;
   height: 1em;
@@ -68,19 +77,19 @@
 
 
 @media (max-width: 768px) {
-  .top-navbar {
+  .top-navbar .container {
     flex-direction: column;
     align-items: center;
-    padding: 20px 0px;
+    padding: 10px 0px;
   }
 
-  .top-navbar div:first-child {
+  .info-msg {
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 
-  .top-navbar div:last-child {
-    margin-left: 0px;
+  .social-links span {
+    padding: 0px 20px;
   }
 }
