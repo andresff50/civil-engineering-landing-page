@@ -1,0 +1,9 @@
+<div class="social-links">
+  @for (socialLink of socialLinks; track socialLink.id) {
+    <span>
+      <a [href]="socialLink.url" target="_blank">
+        <i [class]="socialLink.icon"></i>
+      </a>
+    </span>
+  }
+</div>
