@@ -1,40 +1,33 @@
 <section class="header-container">
-  <div class="header-content">
+  <div class="header-content flex-between">
     <!-- Logo -->
-    <div class="logo-container">
-      <img src="images/logo.png" alt="Logo" class="logo">
-    </div>
+    <app-logo></app-logo>
 
     <!-- Información de soporte y horario -->
-    <div class="info-container">
+    <div class="right-container flex-center">
       <!-- Soporte al cliente -->
-      <div class="support-info">
-        <i class="fa-solid fa-mobile-screen-button"></i>
-        <div class="support-text">
-          <span class="support-title">{{supportInfo.title}}</span>
-          <span class="support-phone">{{supportInfo.text}}</span>
-        </div>
-      </div>
-
+      <app-info-item
+        icon="{{ supportInfo.icon }}"
+        title="{{ supportInfo.title }}"
+        description="{{ supportInfo.text }}">
+      </app-info-item>
 
       <!-- Línea divisoria -->
       <div class="divider"></div>
 
       <!-- Horario de trabajo -->
-      <div class="working-time-info">
-        <i class="fas fa-clock working-time-icon"></i>
-        <div class="working-time-text">
-          <span class="working-time-title">{{workingTimeInfo.title}}</span>
-          <span class="working-time-hours">{{workingTimeInfo.text}}</span>
-        </div>
-      </div>
+      <app-info-item
+        icon="{{ workingTimeInfo.icon }}"
+        title="{{ workingTimeInfo.title }}"
+        description="{{ workingTimeInfo.text }}">
+      </app-info-item>
 
       <!-- Botón de solicitud -->
-      <div class="request-quote">
-        <a href="#" class="quote-button">
-          <i class="fa-regular fa-envelope"></i>
-          <span>{{buttonText}}</span>
-        </a>
+      <div class="header-quote-btn">
+        <app-base-button
+          icon="fa-regular fa-envelope"
+          displaytext="{{ buttonText }}">
+        </app-base-button>
       </div>
     </div>
   </div>
