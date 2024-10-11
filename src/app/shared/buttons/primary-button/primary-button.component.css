@@ -1,13 +1,14 @@
-.base-button {
+.primary-button {
   padding: 13.5px 29px 13.5px 29px;
   text-decoration: none;
   border: none;
   border-radius: 5px;
+  font-size: 14px;
   color: var(--white-color);
   background-color: var(--primary-color);
 }
 
-.base-button span {
+.primary-button span {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
@@ -15,11 +16,10 @@
   letter-spacing: 0.7px;
 }
 
-.base-button i {
-  font-size: 14px;
+.icon-left {
   margin-right: 5px;
 }
 
-.base-button:hover {
-  background-color: var(--header-bg-color);
+.icon-right {
+  margin-left: 5px;
 }

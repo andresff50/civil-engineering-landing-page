@@ -1,0 +1,15 @@
+<button type="button" class="primary-button flex-center" >
+  <ng-container>
+    @if (icon() && iconPosition() === 'left') {
+      <i [class]="icon()" class="icon-left"></i>
+    }
+  </ng-container>
+
+  <span>{{ text() }}</span>
+
+  <ng-container>
+    @if (icon() && iconPosition() === 'right') {
+      <i [class]="icon()" class="icon-right"></i>
+    }
+  </ng-container>
+</button>
