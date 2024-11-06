@@ -9,28 +9,41 @@ import { IconPosition } from '../shared/enums/icon-position.enum';
   styleUrl: './image-slider.component.css',
 })
 export class ImageSliderComponent {
-  currentSlide = 0;
+  currentImageIndex = 0;
 
-  slide1 = {
-    image: 'images/slider/business-slider1.jpg',
-    headerTitle: 'High Quality Garantied',
-    title: 'Building And Constructing Is Our Life Business',
-    description: 'With years of immaculate experience in the construction business, we are the client-oriented team looking forward to new breathtaking projects to accomplish!',
-    firstBtnIcon: 'fa-solid fa-mobile-screen-button',
-    firstBtnIconPosition: IconPosition.Left,
-    firstBtnText: 'our services',
-    secondBtnIcon: 'fa-solid fa-mobile-screen-button',
-    secondBtnIconPosition: IconPosition.Right,
-    secondBtnText: 'About us',
+  images: string[] = [
+    'images/slider/business-slider1.jpg',
+    'images/slider/business-slider2.jpg',
+    'images/slider/business-slider3.jpg'
+  ];
+
+  // slide = {
+  //   image: 'images/slider/business-slider1.jpg',
+  //   headerTitle: 'High Quality Garantied',
+  //   title: 'Building And Constructing Is Our Life Business',
+  //   description: 'With years of immaculate experience in the construction business, we are the client-oriented team looking forward to new breathtaking projects to accomplish!',
+  //   firstBtnIcon: 'fa-solid fa-angle-right',
+  //   firstBtnIconPosition: IconPosition.Right,
+  //   firstBtnText: 'our services',
+  //   secondBtnIcon: 'fa-solid fa-angle-right',
+  //   secondBtnIconPosition: IconPosition.Right,
+  //   secondBtnText: 'About us',
     
-  };
+  // };
 
-  // nextSlide() {
-  //   this.currentSlide = (this.currentSlide + 1) % this.slides.length;
-  // }
+  prevImage(): void {
+    this.currentImageIndex = this.currentImageIndex === 0 
+      ? this.images.length - 1 
+      : this.currentImageIndex - 1;
+  }
 
-  // prevSlide() {
-  //   this.currentSlide =
-  //     (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-  // }
+  nextImage(): void {
+    this.currentImageIndex = this.currentImageIndex === this.images.length - 1 
+      ? 0 
+      : this.currentImageIndex + 1;
+  }
+
+  setImage(index: number): void {
+    this.currentImageIndex = index;
+  }
 }
