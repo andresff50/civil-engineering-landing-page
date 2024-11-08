@@ -10,7 +10,7 @@
   [secondBtnText]="slide.secondBtnText">
 </app-info-card> -->
 <div class="slider-container">
-  <button class="nav-button prev" (click)="prevImage()">
+  <button type="button" title="btn-prev" class="slide-button prev" (click)="prevImage()">
     <i class="fa-solid fa-chevron-left"></i>
   </button>
   <div class="image-container">
@@ -19,7 +19,11 @@
       [alt]="'Image ' + (currentImageIndex + 1)"
       class="slide-image" />
   </div>
-  <button class="nav-button next" (click)="nextImage()">
+  <div class="card">
+    <h3 class="card-title">Test</h3>
+    <p class="card-content">this is a sample card</p>
+  </div>
+  <button type="button" title="btn-next" class="slide-button next" (click)="nextImage()">
     <i class="fa-solid fa-angle-right"></i>
   </button>
 </div>
