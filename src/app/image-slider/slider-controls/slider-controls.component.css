@@ -1,0 +1,22 @@
+
+.slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  color: var(--white-color);
+  border: none;
+  background-color: var(--primary-color);
+}
+
+.slide-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.prev {
+  left: 16px;
+}
+
+.next {
+  right: 16px;
+}

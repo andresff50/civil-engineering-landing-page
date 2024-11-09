@@ -1,29 +1,37 @@
-<!-- <app-info-card
-  [headerTitle]="slide.headerTitle"
-  [title]="slide.title"
-  [description]="slide.description"
-  [firstBtnIcon]="slide.firstBtnIcon"
-  [firstBtnIconPosition]="slide.firstBtnIconPosition"
-  [firstBtnText]="slide.firstBtnText"
-  [secondBtnIcon]="slide.secondBtnIcon"
-  [secondBtnIconPosition]="slide.secondBtnIconPosition"
-  [secondBtnText]="slide.secondBtnText">
-</app-info-card> -->
 <div class="slider-container">
-  <button type="button" title="btn-prev" class="slide-button prev" (click)="prevImage()">
-    <i class="fa-solid fa-chevron-left"></i>
-  </button>
-  <div class="image-container">
-    <img
-      [src]="images[currentImageIndex]"
-      [alt]="'Image ' + (currentImageIndex + 1)"
-      class="slide-image" />
-  </div>
-  <div class="card">
-    <h3 class="card-title">Test</h3>
-    <p class="card-content">this is a sample card</p>
-  </div>
-  <button type="button" title="btn-next" class="slide-button next" (click)="nextImage()">
-    <i class="fa-solid fa-angle-right"></i>
-  </button>
+  <app-slider-image-display
+    [imageUrl]="currentSlide.image">
+  </app-slider-image-display>
+
+  @if (currentSlide.cardType === 'card1') {
+    <ng-container>
+      <div class="card">
+        <h3 class="card-title">{{ currentSlide.headerTitle }}</h3>
+        <p class="card-content">this is a sample card</p>
+      </div>
+    </ng-container>
+  } @else if (currentSlide.cardType === 'card2') {
+    <ng-container>
+      <div class="card">
+        <h3 class="card-title">{{ currentSlide.headerTitle }}</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio
+          omnis ducimus, doloribus quisquam ipsam perferendis ea esse nulla
+          veniam nemo possimus provident odit veritatis molestias, inventore
+          eius at labore!
+        </p>
+      </div>
+    </ng-container>
+  } @else if (currentSlide.cardType === 'card3') {
+    <ng-container>
+      <div class="card">
+        <h3 class="card-title">{{ currentSlide.headerTitle }}</h3>
+        <p class="card-content">this is a sample card card 3</p>
+      </div>
+    </ng-container>
+  }
+  <app-slider-controls
+    (previous)="prevImage()"
+    (next)="nextImage()">
+  </app-slider-controls>
 </div>
